@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Surya's Portfolio</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: #ededed;
+            background-color: #081b29;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 10px;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #ededed;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .navbar a {
+            font-size: 18px;
+            color: #ededed;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 35px;
+            transition: color .3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #00abf0;
+        }
+
+        .home {
+            background: url('sample3.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 4%;
+        }
+
+        .home-content {
+            max-width: 600px;
+        }
+
+        .home-content h1 {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .home-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #00abf0;
+        }
+
+        .home-content p {
+            font-size: 16px;
+            margin: 20px 0 40px;
+        }
+
+        .btn-box {
+            display: flex;
+            justify-content: space-between;
+            width: 345px;
+            height: 50px;
+        }
+
+        .btn-box a {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            background: #00abf0;
+            border: 2px solid #00abf0;
+            border-radius: 8px;
+            font-size: 19px;
+            color: #081b29;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            z-index: 1;
+            overflow: hidden;
+            transition: background-color .5s, color .5s;
+        }
+
+        .btn-box a:hover {
+            background-color: #081b29;
+            color: #00abf0;
+        }
+
+        .btn-box a:nth-child(2) {
+            background: transparent;
+            color: #00abf0;
+        }
+
+        .btn-box a:nth-child(2):hover {
+            background-color: #00abf0;
+            color: #081b29;
+        }
+
+        .home-sci {
+            position: absolute;
+            bottom: 40px;
+            width: 170px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .home-sci a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            background: transparent;
+            border: 2px solid #00abf0;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #00abf0;
+            text-decoration: none;
+            transition: background-color .5s, color .5s;
+        }
+
+        .home-sci a:hover {
+            background-color: #00abf0;
+            color: #081b29;
+        }
+
+        /* Contact Options Styles */
+        .contact-options {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background-color: #081b29;
+            border: 1px solid #00abf0;
+            border-radius: 5px;
+            padding: 10px;
+            z-index: 100;
+        }
+
+        .contact-options a {
+            display: block;
+            color: #ededed;
+            text-decoration: none;
+            margin: 5px 0;
+            transition: color 0.3s;
+        }
+
+        .contact-options a:hover {
+            color: #00abf0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">SURYA.</a>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#" onclick="viewCertificates()">Certificate</a>
+            <a href="https://github.com/Surya-Mathivanan" target="_blank">Projects</a>
+            <a href="about.html" target="_blank">About</a> <!-- Updated About Button -->
+            <a href="#" id="contact-button">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="home-content">
+            <h1>Hi, I'm Surya</h1>
+            <h3>Data Analyst</h3>
+            <p>I'm currently studying Artificial Intelligence and Data Science at KIT-Kalaignarkarunanidhi Institute of Technology, and I’m eager to dive into the world of data. As a data enthusiast, I often think of myself as a maestro orchestrating data pipelines, turning raw data into valuable insights. I’m excited to join the team and get started on this journey. If there are any initial steps or important details I should know about, please let me know!</p>
+            <div class="btn-box">
+                <a href="mailto:msuryamsurya2003@gmail.com?subject=Hire%20Me">Hire Me</a>
+                <a href="mailto:msuryamsurya2003@gmail.com?subject=Questions">Questions</a>
+            </div>
+        </div>
+
+        <div class="home-sci">
+            <a href="https://www.facebook.com/profile.php?id=100078224574955" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com/your-profile" target="_blank"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.linkedin.com/in/m-surya-a552a6265/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+        </div>
+
+        <!-- Contact Options -->
+        <div class="contact-options" id="contact-options">
+            <a href="tel:+919344859103">Phone Call</a>
+            <a href="mailto:msuryamsurya2003@gmail.com">Send Mail</a>
+            <a href="sms:+919344859103?body=Feedback">Feedback</a>
+            <a href="sms:+919344859103?body=Your%20Point%20of%20View">Your Point of View</a>
+        </div>
+    </section>
+
+    <script>
+        function viewCertificates() {
+            const certificateWindow = window.open("", "_blank", "width=800,height=600");
+            certificateWindow.document.write(`
+                <html>
+                <head>
+                    <title>Certificates</title>
+                    <style>
+                        body {
+                            font-family: 'Poppins', sans-serif;
+                            text-align: center;
+                            padding: 20px;
+                            background-color: #081b29;
+                            color: #00abf0;
+                        }
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                            margin-bottom: 20px;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>My Certificates</h1>
+                    <center>
+                        <h2>Altair Certifications</h2>
+                    </center>
+                    <img src="assets/altair1.png" alt="Certificate 1">
+                    <img src="assets/altair2.png" alt="Certificate 1">
+                    <img src="assets/altair3.png" alt="Certificate 1">
+                    <img src="assets/altair4.png" alt="Certificate 1">
+                    <img src="assets/altair5.png" alt="Certificate 1">
+                    <center>
+                        <h2>Coursera Certifications</h2>
+                    </center>
+                    <img src="assets/c1.png" alt="Certificate 1">
+                    <img src="assets/c2.png" alt="Certificate 1">
+                    <img src="assets/c3.png" alt="Certificate 1">
+                    <img src="assets/c4.png" alt="Certificate 1">
+                    <img src="assets/c5.png" alt="Certificate 1">
+                    <img src="assets/c6.png" alt="Certificate 1">
+                    <img src="assets/c7.png" alt="Certificate 1">
+                    <img src="assets/c8.png" alt="Certificate 1">
+                    <img src="assets/c9.png" alt="Certificate 1">
+                    <center>
+                        <h2>Infosys Certifications</h2>
+                    </center>
+                    <img src="assets/i1.png" alt="Certificate 1">
+                    <img src="assets/i2.png" alt="Certificate 1">
+                    <img src="assets/i3.png" alt="Certificate 1">
+                    <img src="assets/i4.png" alt="Certificate 1">
+                    <img src="assets/i5.png" alt="Certificate 1">
+                    <img src="assets/i6.png" alt="Certificate 1">
+                    <img src="assets/i7.png" alt="Certificate 1">
+                    <img src="assets/i8.png" alt="Certificate 1">
+                    <center>
+                        <h2>NPTEL Certifications</h2>
+                    </center>
+                    <img src="assets/nptel.png" alt="Certificate 1">
+                </body>
+                </html>
+            `);
+        }
+
+        document.getElementById("contact-button").addEventListener("click", function() {
+            const contactOptions = document.getElementById("contact-options");
+            contactOptions.style.display = contactOptions.style.display === "block" ? "none" : "block";
+        });
+    </script>
+</body>
+</html>
