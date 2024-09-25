@@ -11,10 +11,14 @@
             align-items: center;
             justify-content: center;
             height: 100%;
-            background: linear-gradient(to right, #FFD700, #87CEEB); /* Golden to Sky Blue Gradient */
-            overflow: hidden;
+            /* Replace with your image path */
+            background-image: url('backroundimage.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
         }
+
         /* Aurora effect */
         body::before {
             content: "";
@@ -29,38 +33,20 @@
             mix-blend-mode: screen;
             z-index: -1;
         }
-        /* Starry background */
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: blink 2s infinite alternate;
-        }
-        .star:nth-child(2n) {
-            animation: moveZigzag 5s infinite linear;
-        }
-        @keyframes blink {
-            0% { opacity: 0.1; }
-            100% { opacity: 1; }
-        }
-        @keyframes moveZigzag {
-            0% { transform: translateY(0) translateX(0); }
-            50% { transform: translateY(20px) translateX(-20px); }
-            100% { transform: translateY(0) translateX(20px); }
-        }
+
         .container {
             display: flex;
             justify-content: space-around;
             align-items: center;
             height: 100%;
             text-align: center;
+            z-index: 1; /* Ensure content appears above the background effects */
         }
+
         .btn {
             width: 120px;
             height: 120px;
-            background-color: #fafafa;
+            background-color: rgba(255, 255, 255, 0.8); /* Added transparency */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -72,14 +58,17 @@
             text-decoration: none;
             padding: 10px;
         }
+
         h3 {
             margin-bottom: 10px;
             color: #333;
             font-size: 18px;
         }
+
         i.fa, i.bx {
             font-size: 44px;
         }
+
         /* Neon Glow Effects */
         #school {
             color: #ff4500;
@@ -93,10 +82,7 @@
             color: #1e90ff;
             text-shadow: 0 0 30px #1e90ff;
         }
-        #youtube {
-            color: #ff0000;
-            text-shadow: 0 0 30px #ff0000;
-        }
+
         /* Button Hover Effects */
         .btn.school-btn {
             box-shadow: 0 20px 20px -17px rgba(255,69,0,0.53);
@@ -118,13 +104,6 @@
         .btn.address-btn:hover {
             transform: scale(1.2);
             box-shadow: 0 30px 45px -15px rgba(30,144,255,0.6);
-        }
-        .btn.youtube-btn {
-            box-shadow: 0 20px 20px -17px rgba(255,0,0,0.53);
-        }
-        .btn.youtube-btn:hover {
-            transform: scale(1.2);
-            box-shadow: 0 30px 45px -15px rgba(255,0,0,0.6);
         }
     </style>
 </head>
